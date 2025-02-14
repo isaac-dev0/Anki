@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395534388595",
+    "project_id": "anki-76bd4",
+    "storage_bucket": "anki-76bd4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395534388595:android:68cab9bd420c991b080906",
+        "android_client_info": {
+          "package_name": "com.isaac_dolphin.anki"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCcWj84ka1OufayyAK_gVbjIb4ybto8ZA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
