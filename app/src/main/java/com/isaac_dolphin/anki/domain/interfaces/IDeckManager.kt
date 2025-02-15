@@ -9,7 +9,5 @@ interface IDeckManager {
     suspend fun updateDeck(deck: Deck)
     suspend fun deleteDeck(deckId: String)
     suspend fun addCard(deckId: String, cardId: String)
-    suspend fun addCards(deckId: String, cardIds: List<String>)
     suspend fun removeCard(deckId: String, cardId: String)
-    suspend fun removeCards(deckId: String, cardIds: List<String>)
 }

@@ -5,6 +5,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.IDeckManager
 import com.isaac_dolphin.anki.domain.models.Deck
+import com.isaac_dolphin.anki.utility.exceptions.CardAddToDeckFailedException
+import com.isaac_dolphin.anki.utility.exceptions.CardRemoveFromDeckFailedException
 import com.isaac_dolphin.anki.utility.exceptions.DeckCreationFailedException
 import com.isaac_dolphin.anki.utility.exceptions.DeckDeletionException
 import com.isaac_dolphin.anki.utility.exceptions.DeckNotFoundException
@@ -13,10 +15,10 @@ import com.isaac_dolphin.anki.utility.exceptions.DecksInCategoryNotFoundExceptio
 import kotlinx.coroutines.tasks.await
 
 /**
- * Deck for storing Cards.
+ * Deck for storing cards.
  *
- * This class holds the CRUD operations for Decks using the "Repository" Design Pattern.
- * @param firestore Database connector for DeckRepository
+ * This class holds the CRUD operations for decks using the "Repository" design pattern.
+ * @param firestore Firestore connector for DeckRepository.
  *
  * **/
 class DeckRepository(
@@ -43,7 +45,7 @@ class DeckRepository(
     /**
      * Retrieves all decks from the list of decks.
      *
-     * @param categoryId The ID of the decks from which category.
+     * @param categoryId The ID of the category from which decks will be retrieved.
      * @return Decks as an object. If no decks exist, return an empty object.
      *
      * **/
@@ -79,7 +81,7 @@ class DeckRepository(
     /**
      * Edit an existing deck in the repository.
      *
-     * @param deck The new deck information to overwrite.
+     * @param deck New deck information to overwrite the current.
      *
      * **/
     override suspend fun updateDeck(deck: Deck) {
@@ -109,20 +111,42 @@ class DeckRepository(
         }
     }
 
+    /**
+     * Add a card to a specified deck.
+     *
+     * @param deckId The ID of the deck.
+     * @param cardId The ID of the card to be added to the deck.
+     *
+     * **/
     override suspend fun addCard(deckId: String, cardId: String) {
-        TODO("Not yet implemented")
+        try {
+            firestore
+                .collection("decks").document(deckId)
+                .collection("cards").document(cardId)
+                .set(cardId).await()
+        } catch (e: Exception) {
+            Log.e("DeckRepository", "Error adding card to deck", e)
+            throw CardAddToDeckFailedException(deckId, cardId)
+        }
     }
 
-    override suspend fun addCards(deckId: String, cardIds: List<String>) {
-        TODO("Not yet implemented")
-    }
-
+    /**
+     * Remove a card from a specified deck.
+     *
+     * @param deckId The ID of the deck.
+     * @param cardId The ID of the card to be removed from the deck.
+     *
+     * **/
     override suspend fun removeCard(deckId: String, cardId: String) {
-        TODO("Not yet implemented")
-    }
-
-    override suspend fun removeCards(deckId: String, cardIds: List<String>) {
-        TODO("Not yet implemented")
+        try {
+            firestore
+                .collection("decks").document(deckId)
+                .collection("cards").document(cardId)
+                .delete().await()
+        } catch (e: Exception) {
+            Log.e("DeckRepository", "Error removing card from deck", e)
+            throw CardRemoveFromDeckFailedException(deckId, cardId)
+        }
     }
 
 }
