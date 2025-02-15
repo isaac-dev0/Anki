@@ -1,16 +1,15 @@
 package com.isaac_dolphin.anki.domain.interfaces
 
 import com.isaac_dolphin.anki.domain.models.Deck
-import java.util.UUID
 
 interface IDeckManager {
-    fun getDeck(deckId: UUID): Deck?
-    fun getDecks(): List<Deck?>
-    fun createDeck(deck: Deck)
-    fun editDeck(deckId: UUID, deckTitle: String) // TODO: use updateDeck class instead.
-    fun deleteDeck(deckId: UUID)
-    // fun addCard(cardId: UUID)
-    // fun addCards(cardIds: List<UUID>)
-    // fun removeCard(cardId: UUID)
-    // fun removeCards(cardIds: List<UUID>)
+    suspend fun getDeck(deckId: String): Deck
+    suspend fun getDecks(categoryId: String): List<Deck>
+    suspend fun createDeck(deck: Deck)
+    suspend fun updateDeck(deck: Deck)
+    suspend fun deleteDeck(deckId: String)
+    suspend fun addCard(deckId: String, cardId: String)
+    suspend fun addCards(deckId: String, cardIds: List<String>)
+    suspend fun removeCard(deckId: String, cardId: String)
+    suspend fun removeCards(deckId: String, cardIds: List<String>)
 }

@@ -1,0 +1,28 @@
+# Tests
+
+- CardRepository
+  - getCard
+  - getCards
+  - createCard
+  - editCard
+  - deleteCard
+- DeckRepository
+  - getDeck
+  - getDecks
+  - createDeck
+  - editDeck
+  - deleteDeck
+  - addCard
+  - addCards
+  - removeCard
+  - removeCards
+- CategoryRepository
+  - getCategory
+  - getCategories
+  - createCategory
+  - editCategory
+  - deleteCategory
+  - addDeck
+  - addDecks
+  - removeDeck
+  - removeDecks
