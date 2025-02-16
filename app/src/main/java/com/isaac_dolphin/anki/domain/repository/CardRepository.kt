@@ -108,5 +108,4 @@ class CardRepository(
             throw CardDeletionException(cardId)
         }
     }
-
 }

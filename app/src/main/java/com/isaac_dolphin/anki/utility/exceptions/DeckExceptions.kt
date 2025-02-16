@@ -53,3 +53,25 @@ class DeckNotFoundException(deckId: String, cause: Throwable? = null):
  * **/
 class DecksInCategoryNotFoundException(categoryId: String, cause: Throwable? = null):
     Exception("No decks found in category: $categoryId", cause)
+
+/**
+ * If the deck fails to add to a category.
+ *
+ * @param categoryId The ID of the category.
+ * @param deckId The ID of the deck.
+ * @param cause Describes the cause of the exception.
+ *
+ * **/
+class DeckAddToCategoryFailedException(categoryId: String, deckId: String, cause: Throwable? = null):
+    Exception("Failed to add deck: $deckId to category: $categoryId", cause)
+
+/**
+ * If the deck fails to remove from a category.
+ *
+ * @param categoryId The ID of the category.
+ * @param deckId The ID of the deck.
+ * @param cause Describes the cause of the exception.
+ *
+ * **/
+class DeckRemoveFromCategoryFailedException(categoryId: String, deckId: String, cause: Throwable? = null):
+    Exception("Failed to remove deck: $deckId from category: $categoryId", cause)

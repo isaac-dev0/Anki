@@ -148,5 +148,4 @@ class DeckRepository(
             throw CardRemoveFromDeckFailedException(deckId, cardId)
         }
     }
-
 }
