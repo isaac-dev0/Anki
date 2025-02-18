@@ -4,25 +4,29 @@
   - getCard
   - getCards
   - createCard
-  - editCard
+  - updateCard
   - deleteCard
 - DeckRepository
   - getDeck
   - getDecks
   - createDeck
-  - editDeck
+  - updateDeck
   - deleteDeck
   - addCard
-  - addCards
   - removeCard
-  - removeCards
 - CategoryRepository
   - getCategory
   - getCategories
   - createCategory
-  - editCategory
+  - updateCategory
   - deleteCategory
   - addDeck
-  - addDecks
   - removeDeck
-  - removeDecks
+- UserRepository
+  - getUser
+  - getUsers
+  - createUser
+  - updateUser
+  - deleteUser
+  - addCategory
+  - removeCategory

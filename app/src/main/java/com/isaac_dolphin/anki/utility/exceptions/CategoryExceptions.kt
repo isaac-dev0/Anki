@@ -47,9 +47,30 @@ class CategoryNotFoundException(categoryId: String, cause: Throwable? = null):
 /**
  * If category(ies) cannot be found within a user.
  *
- * @param userId The ID of the user.
  * @param cause Describes the cause of the exception.
  *
  * **/
-class CategoriesInUserNotFoundException(userId: String, cause: Throwable? = null):
-    Exception("No categories found in user: $userId", cause)
+class CategoriesInUserNotFoundException(cause: Throwable? = null):
+    Exception("No categories found in user", cause)
+
+/**
+ * If the category fails to add to a user.
+ *
+ * @param userId The ID of the user.
+ * @param categoryId The ID of the category.
+ * @param cause Describes the cause of the exception.
+ *
+ * **/
+class CategoryAddToUserFailedException(userId: String, categoryId: String, cause: Throwable? = null):
+    Exception("Failed to add category: $categoryId to user: $userId", cause)
+
+/**
+ * If the category fails to remove from a user.
+ *
+ * @param userId The ID of the user.
+ * @param categoryId The ID of the category.
+ * @param cause Describes the cause of the exception.
+ *
+ * **/
+class CategoryRemoveFromUserFailedException(userId: String, categoryId: String, cause: Throwable? = null):
+    Exception("Failed to remove category: $categoryId from user: $userId", cause)
