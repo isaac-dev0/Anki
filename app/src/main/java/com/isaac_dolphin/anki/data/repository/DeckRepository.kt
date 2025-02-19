@@ -1,17 +1,17 @@
-package com.isaac_dolphin.anki.domain.repository
+package com.isaac_dolphin.anki.data.repository
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.IDeckManager
-import com.isaac_dolphin.anki.domain.models.Deck
-import com.isaac_dolphin.anki.utility.exceptions.CardAddToDeckFailedException
-import com.isaac_dolphin.anki.utility.exceptions.CardRemoveFromDeckFailedException
-import com.isaac_dolphin.anki.utility.exceptions.DeckCreationFailedException
-import com.isaac_dolphin.anki.utility.exceptions.DeckDeletionException
-import com.isaac_dolphin.anki.utility.exceptions.DeckNotFoundException
-import com.isaac_dolphin.anki.utility.exceptions.DeckUpdateFailedException
-import com.isaac_dolphin.anki.utility.exceptions.DecksInCategoryNotFoundException
+import com.isaac_dolphin.anki.data.models.Deck
+import com.isaac_dolphin.anki.domain.utility.exceptions.CardAddToDeckFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CardRemoveFromDeckFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckCreationFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckDeletionException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckNotFoundException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckUpdateFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DecksInCategoryNotFoundException
 import kotlinx.coroutines.tasks.await
 
 /**

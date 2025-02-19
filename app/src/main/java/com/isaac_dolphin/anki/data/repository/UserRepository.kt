@@ -1,17 +1,17 @@
-package com.isaac_dolphin.anki.domain.repository
+package com.isaac_dolphin.anki.data.repository
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.IUserManager
-import com.isaac_dolphin.anki.domain.models.User
-import com.isaac_dolphin.anki.utility.exceptions.CategoriesInUserNotFoundException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryAddToUserFailedException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryRemoveFromUserFailedException
-import com.isaac_dolphin.anki.utility.exceptions.UserCreationFailedException
-import com.isaac_dolphin.anki.utility.exceptions.UserDeletionException
-import com.isaac_dolphin.anki.utility.exceptions.UserNotFoundException
-import com.isaac_dolphin.anki.utility.exceptions.UserUpdateFailedException
+import com.isaac_dolphin.anki.data.models.User
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoriesInUserNotFoundException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryAddToUserFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryRemoveFromUserFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.UserCreationFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.UserDeletionException
+import com.isaac_dolphin.anki.domain.utility.exceptions.UserNotFoundException
+import com.isaac_dolphin.anki.domain.utility.exceptions.UserUpdateFailedException
 import kotlinx.coroutines.tasks.await
 
 /**

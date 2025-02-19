@@ -1,17 +1,17 @@
-package com.isaac_dolphin.anki.domain.repository
+package com.isaac_dolphin.anki.data.repository
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.ICategoryManager
-import com.isaac_dolphin.anki.domain.models.Category
-import com.isaac_dolphin.anki.utility.exceptions.CategoriesInUserNotFoundException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryCreationFailedException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryDeletionException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryNotFoundException
-import com.isaac_dolphin.anki.utility.exceptions.CategoryUpdateFailedException
-import com.isaac_dolphin.anki.utility.exceptions.DeckAddToCategoryFailedException
-import com.isaac_dolphin.anki.utility.exceptions.DeckRemoveFromCategoryFailedException
+import com.isaac_dolphin.anki.data.models.Category
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoriesInUserNotFoundException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryCreationFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryDeletionException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryNotFoundException
+import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryUpdateFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckAddToCategoryFailedException
+import com.isaac_dolphin.anki.domain.utility.exceptions.DeckRemoveFromCategoryFailedException
 import kotlinx.coroutines.tasks.await
 
 /**
@@ -57,7 +57,7 @@ class CategoryRepository(
             query.documents.mapNotNull { it.toObject(Category::class.java) }
         } catch (e: Exception) {
             Log.e("CategoryRepository", "Error getting categories", e)
-            throw CategoriesInUserNotFoundException(userId)
+            throw CategoriesInUserNotFoundException()
         }
     }
 

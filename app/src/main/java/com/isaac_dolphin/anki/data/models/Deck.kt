@@ -1,9 +1,9 @@
-package com.isaac_dolphin.anki.domain.models
+package com.isaac_dolphin.anki.data.models
 
 import java.util.UUID
 
-data class Category(
+data class Deck(
     val id: String = UUID.randomUUID().toString(),
     var title: String,
-    var userId: String
+    var categoryId: String
 )

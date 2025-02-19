@@ -1,4 +1,4 @@
-package com.isaac_dolphin.anki.domain.models
+package com.isaac_dolphin.anki.data.models
 
 import java.util.UUID
 
