@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.interfaces
 
-import com.isaac_dolphin.anki.data.models.User
+import com.isaac_dolphin.anki.data.model.User
 
 interface IUserManager {
     suspend fun getUser(userId: String): User

@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.ICategoryManager
-import com.isaac_dolphin.anki.data.models.Category
+import com.isaac_dolphin.anki.data.model.Category
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoriesInUserNotFoundException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryCreationFailedException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryDeletionException

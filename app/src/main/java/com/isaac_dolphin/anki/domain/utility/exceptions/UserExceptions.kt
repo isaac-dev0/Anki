@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.utility.exceptions
 
-import com.isaac_dolphin.anki.data.models.User
+import com.isaac_dolphin.anki.data.model.User
 
 /**
  * If the user fails to be created.

@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.IUserManager
-import com.isaac_dolphin.anki.data.models.User
+import com.isaac_dolphin.anki.data.model.User
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoriesInUserNotFoundException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryAddToUserFailedException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CategoryRemoveFromUserFailedException

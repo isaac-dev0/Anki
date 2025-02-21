@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.utility.exceptions
 
-import com.isaac_dolphin.anki.data.models.Card
+import com.isaac_dolphin.anki.data.model.Card
 
 // Customisable exceptions for card-related operations.
 

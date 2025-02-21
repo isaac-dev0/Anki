@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.ICardManager
-import com.isaac_dolphin.anki.data.models.Card
+import com.isaac_dolphin.anki.data.model.Card
 import com.isaac_dolphin.anki.domain.utility.exceptions.CardCreationFailedException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CardDeletionException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CardNotFoundException

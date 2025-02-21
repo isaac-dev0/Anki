@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.interfaces
 
-import com.isaac_dolphin.anki.data.models.Deck
+import com.isaac_dolphin.anki.data.model.Deck
 
 interface IDeckManager {
     suspend fun getDeck(deckId: String): Deck

@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.interfaces
 
-import com.isaac_dolphin.anki.data.models.Category
+import com.isaac_dolphin.anki.data.model.Category
 
 interface ICategoryManager {
     suspend fun getCategory(categoryId: String): Category

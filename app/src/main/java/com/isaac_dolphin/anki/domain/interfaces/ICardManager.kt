@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.interfaces
 
-import com.isaac_dolphin.anki.data.models.Card
+import com.isaac_dolphin.anki.data.model.Card
 
 interface ICardManager {
     suspend fun getCard(cardId: String): Card

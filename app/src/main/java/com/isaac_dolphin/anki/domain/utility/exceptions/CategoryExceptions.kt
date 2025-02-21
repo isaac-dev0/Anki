@@ -1,6 +1,6 @@
 package com.isaac_dolphin.anki.domain.utility.exceptions
 
-import com.isaac_dolphin.anki.data.models.Category
+import com.isaac_dolphin.anki.data.model.Category
 
 // Customisable exceptions for category-related operations.
 

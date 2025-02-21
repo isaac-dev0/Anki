@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import com.isaac_dolphin.anki.domain.interfaces.IDeckManager
-import com.isaac_dolphin.anki.data.models.Deck
+import com.isaac_dolphin.anki.data.model.Deck
 import com.isaac_dolphin.anki.domain.utility.exceptions.CardAddToDeckFailedException
 import com.isaac_dolphin.anki.domain.utility.exceptions.CardRemoveFromDeckFailedException
 import com.isaac_dolphin.anki.domain.utility.exceptions.DeckCreationFailedException
