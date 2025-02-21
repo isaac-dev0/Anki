@@ -1,4 +1,4 @@
-package com.isaac_dolphin.anki.ui.theme
+package com.isaac_dolphin.anki.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

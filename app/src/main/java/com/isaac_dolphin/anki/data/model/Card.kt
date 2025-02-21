@@ -1,4 +1,4 @@
-package com.isaac_dolphin.anki.data.models
+package com.isaac_dolphin.anki.data.model
 
 import com.isaac_dolphin.anki.domain.enums.ECardType
 import java.util.UUID
