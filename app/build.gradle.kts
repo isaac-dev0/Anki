@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.material3)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.media3.common.ktx)
     testImplementation(libs.junit)

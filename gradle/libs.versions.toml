@@ -1,8 +1,8 @@
 [versions]
-agp = "8.8.1"
-constraintlayout = "2.2.0"
+agp = "8.8.2"
+constraintlayout = "2.2.1"
 firebaseAuthKtx = "23.2.0"
-firebaseBom = "33.9.0"
+firebaseBom = "33.10.0"
 firebaseFirestoreKtx = "25.1.2"
 firebaseStorageKtx = "21.0.1"
 hiltAndroid = "2.51.1"
@@ -12,22 +12,17 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
-activityCompose = "1.10.0"
-composeBom = "2024.04.01"
-material = "1.7.8"
-mockk = "{version}"
-mockkAgent = "{version}"
-mockkAgentVersion = "version}"
-mockkAndroid = "{version}"
+activityCompose = "1.10.1"
+composeBom = "2025.02.00"
+material3 = "1.3.1"
 mockkAndroidVersion = "1.13.8"
 mockkMockkAgent = "1.13.8"
 media3CommonKtx = "1.5.1"
-navigationCompose = "2.8.7"
+navigationCompose = "2.8.8"
 
 [libraries]
 androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
@@ -48,11 +43,8 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
-mockk-agent = { module = "io.mockk:mockk-agent", version.ref = "mockkAgent" }
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 mockk-agent-v1138 = { module = "io.mockk:mockk-agent", version.ref = "mockkMockkAgent" }
-mockk-agent-vversion = { module = "io.mockk:mockk-agent", version.ref = "mockkAgentVersion" }
-mockk-android = { module = "io.mockk:mockk-android", version.ref = "mockkAndroid" }
 mockk-android-v1138 = { module = "io.mockk:mockk-android", version.ref = "mockkAndroidVersion" }
 androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
 
@@ -60,4 +52,5 @@ androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
