@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Anki</string>
+    <string name="user_list_title">User List</string>
+    <string name="bottom_navigation_login_title">Login</string>
+    <string name="bottom_navigation_item1_title">Home</string>
+    <string name="bottom_navigation_item2_title">Learning</string>
+    <string name="bottom_navigation_item3_title">Profile</string>
 </resources>

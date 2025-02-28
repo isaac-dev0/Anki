@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/bottom_navigation_item1_title"
+        android:icon="@android:drawable/ic_menu_compass"
+        app:menu="@menu/bottom_navigation_menu" />
+    <item
+        android:id="@+id/navigation_item_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/bottom_navigation_item2_title"
+        android:icon="@android:drawable/ic_menu_search"
+        app:menu="@menu/bottom_navigation_menu" />
+    <item
+        android:id="@+id/navigation_item_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:title="@string/bottom_navigation_item3_title"
+        android:icon="@android:drawable/picture_frame"
+        app:menu="@menu/bottom_navigation_menu" />
+</menu>

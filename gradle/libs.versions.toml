@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.1"
+constraintlayout = "2.2.0"
 firebaseAuthKtx = "23.2.0"
 firebaseBom = "33.9.0"
 firebaseFirestoreKtx = "25.1.2"
@@ -13,6 +14,7 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
 composeBom = "2024.04.01"
+material = "1.7.8"
 mockk = "{version}"
 mockkAgent = "{version}"
 mockkAgentVersion = "version}"
@@ -20,9 +22,13 @@ mockkAndroid = "{version}"
 mockkAndroidVersion = "1.13.8"
 mockkMockkAgent = "1.13.8"
 media3CommonKtx = "1.5.1"
+navigationCompose = "2.8.7"
 
 [libraries]
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-material = { module = "androidx.compose.material:material", version.ref = "material" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
 firebase-auth-ktx = { module = "com.google.firebase:firebase-auth-ktx", version.ref = "firebaseAuthKtx" }
 firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebase-firestore-ktx = { module = "com.google.firebase:firebase-firestore-ktx", version.ref = "firebaseFirestoreKtx" }
